@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.main-section{
+    max-width: 100%;
+}
+.container{
+    max-width:1364px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.heading{
+    text-align: center;
+    font-size: 46px;
+    line-height: 132px;
+    font-weight: 500;
+    padding-top: 68px;
+
+}
+.links{
+    display:flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 66px;
+
+}
+.tabs{
+    max-height: 555px;
+    align-items: center;
+    background-color:#043673;
+    color: #ffff;
+    border: 1px solid #1B4D8B;
+    cursor: pointer;
+    /* height: auto; */
+    height: 555px;
+    width: 8%;
+    transition: 0.2s all ease-in;
+
+
+}
+.slide-wrap{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+    align-items: center;
+
+}
+.tab-name{
+    font-size: 28px;
+    font-weight: 400;
+    transform: translateX(-50%) rotate(-90deg);
+    white-space: nowrap;
+    text-align: right;
+    transform-origin: right;
+
+
+}
+.tab-no{
+    font-size: 39px;
+    font-weight: 600;
+    line-height: 86px;
+}
+.image-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+.image-wrap img{
+    /* max-width: 952px; */
+    
+    max-height: 555px;
+    object-fit: cover;
+    height: 100% ;
+    width: 100%;
+
+
+}
+/* .image-wrap{
+    width: 100%;
+    padding-bottom: calc(555 / 818.39 * 100%);
+    position: relative;
+}
+.image-wrap img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ */
+.tab-links{
+    width: 100%;
+}
+.image-wrap{
+    display:none;
+}
+.active .slide-wrap{
+    display: none;
+}
+.active .image-wrap{
+    display:block;
+
+}
+ .active{
+    width: 68%;
+}
+.image-text{
+    position:absolute;
+    left: 160px;
+    top: -69px;
+    animation-name: pop-up;
+    animation-duration: 1s;
+
+}
+.slide-no{
+    position: absolute;
+    right: 36px;
+    bottom: 0;
+    font-size: 39px;
+    line-height: 86px;
+    font-weight: 600;
+
+}
+@keyframes pop-up {
+    0%   { left:100%; top:-69px;}
+    100%  { left:160px; top:-69px;}
+  }
+
+.image-text h1{
+    font-size: 112px;
+    color: #C4D4E6;
+    line-height: 130px;
+    font-weight: 700;
+}
+.image-text p{
+    font-size: 29px;
+    line-height: 51px;
+    font-weight: 400;
+}
+@media (max-width:991px) {
+    .container{
+        width: 100%;
+    }
+
+    .heading{
+        padding-top: 20px;
+    }
+    .image-text h1{
+        font-size: 70px;
+        line-height: 100px;
+    }
+    .image-text{
+        top:-57px;
+        left: 128px;
+    }
+    .image-text p{
+    font-size: 25px;
+    }
+    /* .image-wrap{
+        padding-bottom: calc(555 / 492 * 100%);
+
+    } */
+    @keyframes pop-up {
+        0%   { left:100%; top:-57px;}
+        100%  { left:128px; top:-57px;}
+    
+    }
+    .image-wrap{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+}
+
+@media (max-width:767px) {
+    .container{
+        width: 100%;
+    }
+    .heading{
+        font-size: 30px;
+        padding-top: 0;
+        line-height: 100px;
+    }
+    .links{
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .tab-name{
+        transform: translateX(20%) rotate(0deg);
+        text-align: left; 
+        transform-origin: left;
+        font-size: 18px;
+    }
+    .tabs{
+        height: 55px;
+        width: 100%;
+        max-height: 235px;
+    }
+    .active{
+        width: 100%;
+        height: 235px;
+        object-fit: cover;
+    }
+    .slide-wrap{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .image-wrap{
+            
+    width: 100%;
+    max-height: 235px;
+
+}
+.image-wrap img{
+    height:235px;
+}
+
+
+
+    .tab-no{
+        padding-right: 10%;
+        line-height: 50px;
+    }
+    .image-text h1{
+        font-size: 30px;
+        line-height: 0px;
+    }
+    .image-text {
+        top: 0;
+        left: 120px;
+        
+    }
+    @keyframes pop-up {
+        0%   { left:100%; top:0;}
+        100%  { left:120px; top:0;}
+    
+    }
+
+    .image-text p{
+        font-size: 18px;
+        line-height: 50px;
+    }
+}
